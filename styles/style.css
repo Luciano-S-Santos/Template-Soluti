@@ -1,0 +1,423 @@
+@charset "UTF-8";
+/*CONFIG PADRÃO*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;  
+}
+:root{
+    /*PALETA DE CORES*/
+    --vClaro: #04BF8A;
+    --colorHeader: #107266;
+    --colorHeaderDark: #0d5e54;
+    --aClaro: #026873;
+    --aEscuro: #024059;
+    --Roxo: #7538F2;
+    --colorSimbol: #11e763;
+}
+html,
+
+input:focus, textarea:focus, select:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+/************************************************************************/
+
+/*********ELEMENTOS GLOBAIS DO HEADER*********/
+header{
+    background-color: var(--colorHeader);
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.363);
+    
+}
+.centralizador{
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 15px;
+}
+#navegation-container{
+    display: flex;
+}
+
+/*********LINHA DO TOPO*********/
+#top{
+    background-color: var(--colorHeaderDark);
+    height: 25px;
+    font-size: 15px;
+    width: 100%;
+}
+#top ul{
+    float: right;
+    margin-top: 1px;
+}
+#top ul li:not(:last-child){
+    margin-right: 30px;
+}
+#top ul li{
+    display: inline-block;
+    margin: 0 10px;
+    margin-top: 3px;
+}
+#top ul li a{
+    color: white;
+    text-decoration: none;
+}
+/**********END LINHA DO TOP**********/
+
+
+/**********CONTAINER ESQUERDO DO HEADER**********/
+#left-container{
+    max-width: 140px;
+    min-width: 140px;
+}
+#left-container h3{
+    color: white;
+    font-size: 13px;
+}
+#left-container img{
+    width: 28px;
+    height: 28px;
+}
+#left-container .icon-c-left{
+    width: 60px;
+    height: 50%;
+    padding: 3px 0;
+    margin: 22px 0 0 0;
+    border-radius: 7px;
+    position: solid;
+    cursor: pointer;
+    text-align: center;
+}
+#left-container .icon-c-left:hover{
+    background-color: var(--colorHeaderDark);
+}
+/*comunidade*/
+#comunidade-box{
+    display: flex;
+}
+/*menu lateral*/
+#menu-lateral{
+    width: 50px;
+    margin-top: 25px;
+    display: none;
+    cursor: pointer;
+}
+#menu-lateral img{
+    width: 40px;
+    height: 40px;
+}
+
+/*icones de tradução*/
+#translate-block{
+    display: flex;
+}
+
+#translate-block img{
+    width: 35px;
+    height: 35px;
+    margin: 0 5px;
+}
+/**********END CONTAINER ESQUERDO**********/
+
+
+/**********CONTAINER DO NAV**********/
+#navegation-box{
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+/*imagem do logotipo soluti*/
+#navegation-box img{
+    height: 50px;
+    width: 150px;
+    display: block;
+    margin: 10px auto;
+}
+/*navegação*/
+nav{
+    margin: auto;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: .5px;
+}
+nav ul{
+    margin: auto;
+    text-align: center;
+}
+nav ul li{
+    display: inline-block;
+    padding: 17px 12px;
+    margin: 0 -3px;
+    border-radius: 5px;
+}
+nav ul li:hover{
+    transition: .3s;
+    background-color: var(--colorHeaderDark);
+}
+
+#certificadodigital{
+    margin-bottom: 0;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+nav ul ul{
+    margin: 0;
+    height: 0;
+    transition: .3s;
+}
+nav ul ul li{
+    display: none;
+    text-align: left;
+    color: #025940;
+    padding: 0;
+}
+nav ul ul li:not(:last-child){
+    margin-right: 0;
+}
+nav ul li:hover ul{
+    height: 100px;
+    transition: .4s;
+}
+
+nav ul li:hover li{
+    display: block;
+}
+
+
+#darkbackground{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background-color: transparent;
+    opacity: .5;
+    position: absolute;
+    z-index: 2;
+    margin-top: 27px;
+    pointer-events: none;
+    transition: .2s;
+}
+#li-dropbox:hover #darkbackground{
+    background-color: black;
+}
+#dropbox-header{
+    visibility: hidden;
+    width: 1000px;
+    height: 500px;
+    position: absolute;
+    z-index: 10;
+    margin-left: -240px;
+    
+    margin-top: 16px;
+}
+#li-dropbox:hover #dropbox-header{
+    visibility: visible;
+}
+#dropbox-itens{
+    visibility: hidden;
+    background-color: var(--colorHeaderDark);
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+#li-dropbox:hover #dropbox-itens{
+    visibility: visible;
+}
+/**********END CONTAINER DO NAV**********/
+
+
+
+/**********CONTAINER DIREITO**********/
+#rigth-container{
+    max-width: 140px;
+    min-width: 140px;
+}
+#rigth-container h3{
+    color: white;
+    font-size: 13px;
+}
+#rigth-container img{
+    width: 34px;
+    height: 34px;
+}
+#rigth-container .icon-c-rigth{
+    width: 60px;
+    height: 50%;
+    padding: 3px 0;
+    margin: 20px 0 0 0;
+    border-radius: 7px;
+    position: solid;
+    cursor: pointer;
+    text-align: center;
+}
+#rigth-container .icon-c-rigth:hover{
+    background-color: var(--colorHeaderDark);
+}
+/*icones do usuário*/
+#user-box{
+    display: flex;
+    color: var(--colorSimbol);
+}
+
+/*barra de pesquisa*/
+#pesq-container{
+    margin-top: 17px;
+    height: 40px;
+    padding-top: 7px;
+    
+}
+#barra-pesq{
+    float: right;
+    display: flex;
+}
+#barra-pesq input{
+    width: 180px;
+    height: 15px;
+    font-size: 15px;
+    border: none;
+    padding: 7px;
+    border-radius: 20px;
+    position: relative;
+    left: 10px;
+    padding-right: 30px;
+    padding-left: 15px;
+    transition: .3s;
+    color: white;
+    border: solid 2px white;
+    background-color: var(--colorHeader);
+}
+#barra-pesq input::placeholder{
+    color: rgb(219, 219, 219);
+}
+#barra-pesq input:hover{
+    background-color: var(--colorHeaderDark);
+    border: solid 2px var(--colorSimbol);
+
+}
+#barra-pesq input:focus{
+    background-color: var(--colorHeaderDark);
+    border: solid 2px var(--colorSimbol);
+}
+#pesq-icon{
+    height: 23px;
+    width: 23px;
+    position: relative;
+    right: 20px;
+    border-radius: 18px;
+    margin-top: 3px;
+    pointer-events: none;
+    background-color: transparent;
+}
+#pesq-icon img{
+    width: 24px;
+    height: 24px;
+}
+/**********END CONTAINER DIREITO**********/
+
+#conteudo{
+    height: 300px;
+    width: 100%;
+    background-color: grey;
+}
+
+/**********Query do Header**********/
+@media(max-width: 1024px){
+    
+    header{
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+    }
+    main{
+        padding-top: 80px;
+    }
+    #navegation-box{
+        margin-top: 10px;
+    }
+    #top{
+        display: none;
+    }
+    #left-container{
+        display: flex;
+    }
+    #logocontainer{
+        width: 50%;
+        margin: auto;
+    }
+    #navegation-box img{
+        height: 40px;
+        width: 130px;
+        display: block;
+        margin: 10px auto;
+    }
+    nav{
+        display: none;
+    }
+    #social{
+        display: none;
+    }
+    #comercial{
+        display: none;
+    }
+    #comunidade-box{
+        display: none;
+    }
+    #rigth-container{
+        display: flex;
+    }
+    #rigth-container h3{
+        display: none;
+    }
+    #rigth-container img{
+        width: 35px;
+        height: 35px;
+    }
+    #login{
+        display: none;
+    }
+    #pedidos{
+        margin-top: 17px !important;
+        display: block !important;
+    }
+    #pesq-container{
+        margin-top: 10px;
+    }
+    #barra-pesq input{
+        width: 0;
+        border: none;
+    }
+    #barra-pesq input:hover{
+        background-color: transparent;
+        border: none;
+    }
+    #barra-pesq input:focus{
+        background-color: transparent;
+        border: none;
+    }
+    
+    #translate-block{
+        margin-left: 20px;
+    }
+
+    #menu-lateral{
+        display: block;
+    }
+    #menu-lateral img{
+        width: 40px;
+        height: 40px;
+    }
+
+    #left-container .icon-c-left{
+        width: 40px;
+    }
+}
+
+@media(max-width: 732px){
+    #translate-block{
+        display: none;
+    }
+    
+}

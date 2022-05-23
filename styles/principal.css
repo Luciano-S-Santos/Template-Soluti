@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/*CONFIG PADRÃO*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;  
+}
+:root{
+    /*PALETA DE CORES*/
+    --vClaro: #04BF8A;
+    --corHeader: #107266;
+    --aClaro: #026873;
+    --aEscuro: #024059;
+    --Roxo: #7538F2;
+    --colorSimbol: #11e763;
+}
+
+/****************/
+main{
+    background-color: rgb(151, 151, 151);
+    height: 400px;
+}
